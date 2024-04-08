@@ -54,7 +54,7 @@ ROOT_URLCONF = 'luiscenteno_dev.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "templates"],
+        'DIRS': [BASE_DIR / "luiscenteno_dev/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
