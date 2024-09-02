@@ -2,6 +2,7 @@ FROM python:3.10-slim
 
 
 COPY . /src
+COPY static /static
 
 
 WORKDIR /src
