@@ -68,10 +68,6 @@ TEMPLATES = [
     },
 ]
 
-# typically, os.path.join(os.path.dirname(__file__), 'media')
-MEDIA_ROOT = BASE_DIR / "luiscenteno_dev/media"
-MEDIA_URL = '/media/'
-
 WSGI_APPLICATION = 'luiscenteno_dev.wsgi.application'
 
 
