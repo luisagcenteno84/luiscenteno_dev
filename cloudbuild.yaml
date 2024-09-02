@@ -1,0 +1,4 @@
+steps:
+- name: 'gcr.io/cloudbuild/docker'
+  args: ['build', '-t', 'gcr.io/luiscenteno-dev/luiscenteno_dev', '.']
+logsBucket: 'gs://luiscenteno-dev-logs' 
