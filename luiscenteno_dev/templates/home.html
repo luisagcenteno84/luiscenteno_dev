@@ -1,14 +1,51 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}From Data to Insights: A Journey through Data, Analytics, and AI{% endblock %}
 
-{% block header %}
-
-    <div style="overflow-wrap: break-word;">
-        <h3>This is where Data and AI come to life. Here, we explore the latest trends in analytics and digital innovation, making complex concepts accessible to professionals and enthusiasts alike. Join me in uncovering the power of data-driven insights and discovering how technology is shaping our future.</h3>
-    </div>
-{% endblock header %}
-
 {% block content %}
-    <p><Placeholder></p>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-6">
+            <h1 class="mb-4">From Data to Insights</h1>
+            <h3 class="mb-4">A Journey through Data, Analytics, and AI</h3>
+            <p class="lead">
+                Explore the fascinating world of data science, analytics, and artificial intelligence. 
+                Discover how these technologies are shaping our future and transforming industries.
+            </p>
+            <div class="mt-5">
+                <h4 class="mb-3">Explore Our AI Tools:</h4>
+                <div class="row">
+                    <div class="col-md-4 mb-2">
+                        <a href="{% url 'careerbot' %}" class="btn btn-primary btn-lg w-100 h-100 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-briefcase me-2"></i>CareerBot
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <a href="https://docs-chat-151773947715.us-west1.run.app/" class="btn btn-primary btn-lg w-100 h-100 d-flex align-items-center justify-content-center" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-file-alt me-2"></i>Chat with Docs
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <a href="{% url 'chatbot' %}" class="btn btn-primary btn-lg w-100 h-100 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-comments me-2"></i>ChatBot
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="col-md-6">
+            <img src="{% static 'art-artificial-intelligence-blackboard-bulb.jpg' %}" alt="AI Illustration" class="img-fluid rounded shadow">
+        </div>
+    </div>
+</div>
+
+<style>
+    .btn-lg {
+        min-height: 60px; /* Adjust this value as needed */
+    }
+</style>
 {% endblock content %}

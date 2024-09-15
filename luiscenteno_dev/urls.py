@@ -26,7 +26,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('careerbot/', views.careerbot, name='careerbot'),
     path('chatbot/', views.chatbot, name='chatbot'),
-    path('leaderbot/', views.leaderbot, name='leaderbot'),
+    path('blog/', views.blog, name='blog'),
     path('chat-with-documents/', views.chat_with_documents, name='chatwithdocuments'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

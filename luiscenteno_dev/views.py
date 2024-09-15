@@ -9,8 +9,8 @@ def careerbot(request):
 def chatbot(request):
     return render(request, 'chatbot.html')
 
-def leaderbot(request):
-    return render(request, 'leaderbot.html')
+def blog(request):
+    return render(request, 'blog.html')
 
 def chat_with_documents(request):
     return render(request, 'chat_with_documents.html')
