@@ -23,7 +23,11 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    path('careerbot/', views.careerbot, name='careerbot'),
+    path('chatbot/', views.chatbot, name='chatbot'),
+    path('leaderbot/', views.leaderbot, name='leaderbot'),
+    path('chat-with-documents/', views.chat_with_documents, name='chatwithdocuments'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 

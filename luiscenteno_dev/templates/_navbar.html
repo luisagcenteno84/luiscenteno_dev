@@ -1,35 +1,27 @@
 {% load static %}
 <nav class="navbar navbar-expand-md bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/"><img src="{% static 'profile.png' %}" style="width:50px;height:50px;"/> Luis Gonzalez</a>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'profile.png' %}" style="width:50px;height:50px;"/> Luis Gonzalez</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                    <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
-                <li class="nav-item" data-toggle="dropdown">
-                    Portfolio
-                    <b class="caret"></b>
-                    <ul class="dropdown-menu">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog/">ResumeBot</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog/">ChatBot</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog/">LeaderBot</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/blog/">Chat with Documents</a>
-                        </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Portfolio
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                        <li><a class="dropdown-item" href="{% url 'careerbot' %}">ResumeBot</a></li>
+                        <li><a class="dropdown-item" href="{% url 'chatbot' %}">ChatBot</a></li>
+                        <li><a class="dropdown-item" href="https://docs-chat-151773947715.us-west1.run.app/" target="_blank" rel="noopener noreferrer">Chat with Documents</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/blog/">Blog</a>
+                    <a class="nav-link" href="{% url 'home' %}">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://www.linkedin.com/in/luiscgonzalez" target="_blank">LinkedIn</a>
@@ -41,3 +33,9 @@
         </div>
     </div>
 </nav>
+
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>
