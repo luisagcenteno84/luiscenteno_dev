@@ -3,6 +3,7 @@
 
 <html lang="en">
     <head>
+        {% block gtm_header %}{% endblock %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{% endblock %}</title>
@@ -10,6 +11,7 @@
         <link rel="icon" type="image/png" href="{% static 'logo_light.png' %}">
     </head>
     <body>
+        {% block gtm_body %}{% endblock %}
         {% include '_navbar.html' %}
 
         <header class="container py-3">
