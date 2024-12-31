@@ -28,6 +28,9 @@ urlpatterns = [
     path('chatbot/', views.chatbot, name='chatbot'),
     path('blog/', views.blog, name='blog'),
     path('chat-with-documents/', views.chat_with_documents, name='chatwithdocuments'),
+    path('ecomm/', views.ecomm, name='ecomm'),  # Updated line
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-
+```
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'ecomm' %}">Ecomm</a>
+</li>
